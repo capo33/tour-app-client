@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://mern-tour-app.onrender.com/",
 });
 
 API.interceptors.request.use((req) => {
@@ -36,6 +36,6 @@ export const getToursByTag = (tag) => {
   return API.get(`/api/v1/tours/tag/${tag}`);
 };
 export const getRelatedTours = (tags) => {
-  return API.post("/api/v1/tours/relatedTours",  tags );
+  return API.post("/api/v1/tours/relatedTours", tags);
 };
 export const likeTour = (id) => API.patch(`/api/v1/tours/like/${id}`);
