@@ -38,7 +38,9 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/tours/search' element={<Home />} />
             <Route path='/tours/tag/:tag' element={<TagTours   />} />
-            <Route path='/login' element={ !user ? <Login /> : <Navigate to='/' replace={true} />} />
+//             <Route path='/login' element={ !user ? <Login /> : <Navigate to='/' replace={true} />} />
+                       <Route path='/login' element={<Login />} />
+
             <Route path='/register' element={ !user ? <Register /> : <Navigate to='/' replace={true} />} />  
             <Route
               path='/addTour'
