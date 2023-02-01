@@ -182,7 +182,7 @@ const tourSlice = createSlice({
     });
     builder.addCase(createTour.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload.message;
+      state.error = action.payload?.message;
     });
     // // 2. Get Tours
     // builder.addCase(getTours.pending, (state) => {
@@ -194,7 +194,7 @@ const tourSlice = createSlice({
     // });
     // builder.addCase(getTours.rejected, (state, action) => {
     //   state.isLoading = false;
-    //   state.error = action.payload.message;
+    //   state.error = action.payload?.message;
     // });
 
     // 2. Get Tours and Pagination
@@ -209,7 +209,7 @@ const tourSlice = createSlice({
     });
     builder.addCase(getTours.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload.message;
+      state.error = action.payload?.message;
     });
     // 3. Get Tour
     builder.addCase(getTour.pending, (state) => {
@@ -221,7 +221,7 @@ const tourSlice = createSlice({
     });
     builder.addCase(getTour.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload.message;
+      state.error = action.payload?.message;
     });
     // 4. Get Tour By User
     builder.addCase(getToursByUser.pending, (state) => {
@@ -233,7 +233,7 @@ const tourSlice = createSlice({
     });
     builder.addCase(getToursByUser.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload.message;
+      state.error = action.payload?.message;
     });
     // 5. Delete Tour
     builder.addCase(deleteTour.pending, (state) => {
@@ -253,7 +253,7 @@ const tourSlice = createSlice({
     });
     builder.addCase(deleteTour.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload.message;
+      state.error = action.payload?.message;
     });
     // 6. Update Tour
     builder.addCase(updateTour.pending, (state) => {
@@ -275,7 +275,7 @@ const tourSlice = createSlice({
     });
     builder.addCase(updateTour.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload.message;
+      state.error = action.payload?.message;
     });
     // 7. Get Tours By Search
     builder.addCase(searchTours.pending, (state) => {
@@ -287,7 +287,7 @@ const tourSlice = createSlice({
     });
     builder.addCase(searchTours.rejected, (state, action) => {
       state.isLoading = false;
-      state.error = action.payload.message;
+      state.error = action.payload?.message;
     });
     // 8. Get Tours By Tag
     builder.addCase(getToursByTag.pending, (state) => {
