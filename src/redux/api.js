@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  // baseURL: "https://mern-tour-app.onrender.com/",
-  baseURL: "http://localhost:5000/",
+  baseURL: "https://mern-tour-app-api.onrender.com/",
+  // baseURL: "http://localhost:5000/",
 });
 
 API.interceptors.request.use((req) => {
