@@ -34,49 +34,48 @@ function App() {
   }, [dispatch, user]);
   return (
     // <GoogleOAuthProvider clientId=''>
-    <Router>
-      <div className='App'>
-        <Header />
-        <ToastContainer />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/tours/search' element={<Home />} />
-          <Route path='/tours/tag/:tag' element={<TagTours />} />
-          {/* <Route path='/login' element={ !user ? <Login /> : <Navigate to='/' replace={true} />} /> */}
-          <Route path='/login' element={<Login />} />
-          <Route
-            path='/register'
-            element={!user ? <Register /> : <Navigate to='/' replace={true} />}
-          />
-          <Route
-            path='/addTour'
-            element={
-              <PrivateRoute>
-                <AddTour />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path='/editTour/:id'
-            element={
-              <PrivateRoute>
-                <AddTour />
-              </PrivateRoute>
-            }
-          />
-          <Route path='/tour/:tourId' element={<SingleTour />} />
-          <Route
-            path='/dashboard'
-            element={
-              <PrivateRoute>
-                <Dashboard />
-              </PrivateRoute>
-            }
-          />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
-      </div>
-    </Router>
+      <Router>
+        <div className='App'>
+          <Header />
+          <ToastContainer />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/tours/search' element={<Home />} />
+            <Route path='/tours/tag/:tag' element={<TagTours   />} />
+             {/* <Route path='/login' element={ !user ? <Login /> : <Navigate to='/' replace={true} />} /> */}
+                       <Route path='/login' element={<Login />} />
+
+            <Route path='/register' element={ !user ? <Register /> : <Navigate to='/' replace={true} />} />  
+            <Route
+              path='/addTour'
+              element={
+                <PrivateRoute>
+                  <AddTour />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path='/editTour/:id'
+              element={
+                <PrivateRoute>
+                  <AddTour />
+                </PrivateRoute>
+              }
+            />
+            <Route path='/tour/:tourId' element={<SingleTour />} />
+            <Route
+              path='/dashboard'
+              element={
+                <PrivateRoute>
+                  <Dashboard />
+                </PrivateRoute>
+              }
+            />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+          
+        </div>
+      </Router>
     // </GoogleOAuthProvider>
   );
 }
